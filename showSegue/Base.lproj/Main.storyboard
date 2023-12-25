@@ -13,21 +13,22 @@
             <objects>
                 <viewController storyboardIdentifier="firstPage" id="BYZ-38-t0r" customClass="ViewController" customModule="showSegue" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="first page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MyO-J7-Vo1">
-                                <rect key="frame" x="134.33333333333334" y="247" width="121.33333333333334" height="36"/>
+                                <rect key="frame" x="134.33333333333334" y="203" width="121.33333333333334" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MVv-TH-jh1">
-                                <rect key="frame" x="111.00000000000001" y="553" width="168.33333333333337" height="35"/>
+                                <rect key="frame" x="111.00000000000001" y="509" width="168.33333333333337" height="35"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Go to second page"/>
                                 <connections>
                                     <action selector="goto2:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zpy-yE-xBX"/>
+                                    <segue destination="PrS-LZ-PP7" kind="show" identifier="gofrom1to2" id="vQ4-bB-8J2"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -44,14 +45,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="792" y="4"/>
+            <point key="canvasLocation" x="695" y="-183"/>
         </scene>
         <!--View Controller2-->
         <scene sceneID="T4Y-sl-ekc">
             <objects>
                 <viewController storyboardIdentifier="secondPage" id="PrS-LZ-PP7" customClass="ViewController2" customModule="showSegue" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="OFP-tl-Nkm">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Second page " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ec2-rg-hSo">
@@ -66,6 +67,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Go to third page"/>
                                 <connections>
                                     <action selector="goto3:" destination="PrS-LZ-PP7" eventType="touchUpInside" id="yyj-LJ-WPS"/>
+                                    <segue destination="ALR-zl-bKo" kind="show" id="mlZ-ye-4Vm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="629-sq-RHu">
@@ -99,7 +101,7 @@
             <objects>
                 <viewController storyboardIdentifier="thirdPage" id="ALR-zl-bKo" customClass="ViewController3" customModule="showSegue" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SGH-xS-CLl">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="787"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Third page" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vV-ar-IDc">
@@ -114,6 +116,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Go to second page"/>
                                 <connections>
                                     <action selector="goTo2:" destination="ALR-zl-bKo" eventType="touchUpInside" id="D6r-66-eDQ"/>
+                                    <segue destination="PrS-LZ-PP7" kind="presentation" identifier="gofrom3to2" id="3Dy-ox-cWR"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KoH-hc-X7Z">
@@ -122,6 +125,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="Go to first page"/>
                                 <connections>
                                     <action selector="goTo1:" destination="ALR-zl-bKo" eventType="touchUpInside" id="iCS-UU-r3F"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="gofrom3to1" id="2Pu-pZ-QEx"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -140,7 +144,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bVD-p1-fhc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2273.8461538461538" y="57.582938388625593"/>
+            <point key="canvasLocation" x="2457" y="-183"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="8lB-Sg-Fht">
@@ -161,6 +165,10 @@
             <point key="canvasLocation" x="-60" y="3.5545023696682461"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="3Dy-ox-cWR"/>
+        <segue reference="2Pu-pZ-QEx"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
