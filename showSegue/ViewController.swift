@@ -15,5 +15,11 @@ class ViewController: UIViewController {
     }
 
 
+    @IBAction func goto2(_ sender: Any) {
+        let storyboard = UIStoryboard(name:"Main" , bundle:nil)
+        let gidilecekview2 = storyboard.instantiateViewController(withIdentifier: "secondPage") as! ViewController2
+        navigationController?.pushViewController(gidilecekview2, animated: true)
+        
+    }
 }
 

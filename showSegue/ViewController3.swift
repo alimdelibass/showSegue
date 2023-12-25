@@ -15,15 +15,17 @@ class ViewController3: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func goTo2(_ sender: Any) {
+        let storyboard2 = UIStoryboard(name: "Main", bundle: nil)
+        let gidilecekView2 = storyboard2.instantiateViewController(withIdentifier:"secondPage") as! ViewController2
+        navigationController?.pushViewController(gidilecekView2, animated: true)
     }
-    */
+    
 
+    @IBAction func goTo1(_ sender: Any) {
+        let storyboard3 = UIStoryboard(name: "Main", bundle: nil)
+        let gidilecekView1 = storyboard3.instantiateViewController(withIdentifier: "firstPage") as! ViewController
+        navigationController?.pushViewController(gidilecekView1, animated: true)
+    }
+    
 }
